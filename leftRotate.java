@@ -1,25 +1,35 @@
-// Java program to left rotate an Array by 1 element
+// Java Program to left rotate a String by 1 position
 
 public class leftRotate {
 
         public static void main(String[] args) {
               
-               int[] a = {1,2,3,4,5};
+              String name= "arun";
               
-               int size = a.length;
-       
-               int first = a[0];
+               char[] ca = name.toCharArray();
               
-               for(int i=0;i<size-1;i++) {
+               char first = ca[0];
+              
+               int size = ca.length ;
+              
+               for(int i=0;i<size-1;i++) { 
                      
-                      a[i] = a[i+1];
+                      ca[i] = ca[i+1];
                      
               }
               
-               a[size-1] = first;
+               ca[size-1] = first;
               
-              System.out.println(Arrays.toString(a));
-         
+              StringBuffer sb = new StringBuffer();
+              
+               for(char c : ca) {
+                     
+                  sb.append(c);
+                     
+              }
+              
+              System.out.println(sb);
+              
        }
 
 }

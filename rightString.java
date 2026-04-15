@@ -1,27 +1,28 @@
-// Java program to left rotate a String by 3 positions
+//  Java Program to right rotate a String by 3 positions
 
-public class left {
+public class rightString {
 
         public static void main(String[] args) {
               
-              String srt = "arun";
+              String str = "arun";
               
-               char[] ca = srt.toCharArray(); 
+               char[] ca = str.toCharArray();
+              
+               int size = ca.length;
               
                int n = 3;
               
-               for(int j=0;j<n;j++) {
-
-                      char first = ca[0]; 
+               for(int j=1;j<=n;j++) {
+              
+                      char last = ca[size-1]; 
                      
-                      int size = ca.length;
-                     
-                      for(int i=0;i<size-1;i++) { 
+                      for(int i =size-1;i>0;i--) { 
                            
-                            ca[i] = ca[i+1]; 
+                            ca[i] = ca[i-1];
+                           
                      }
                      
-                      ca[size-1] = first;
+                      ca[0] = last;
               
               }
               
@@ -29,13 +30,11 @@ public class left {
               
                for(char c : ca) {
                      
-                 sb.append(c);  
+                 sb.append(c); 
                      
               }
               
-              
               System.out.println(sb);
-              
               
        }
 
