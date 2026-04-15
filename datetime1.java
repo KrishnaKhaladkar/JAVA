@@ -1,0 +1,17 @@
+// Java program to print the Date and Time in a different format
+
+public class datetime1 {
+
+        public static void main(String[] args) {
+          
+              SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+              
+              Date date = new Date();
+              
+              String formattedDate = sdf.format(date);
+              
+              System.out.println(formattedDate);
+       
+       }
+
+}
